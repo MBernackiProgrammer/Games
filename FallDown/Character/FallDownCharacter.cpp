@@ -1,4 +1,4 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+// Copyright Mateusz Bernacki. All Rights Reserved.
 
 #include "FallDownCharacter.h"
 #include "FallDownProjectile.h"
@@ -40,7 +40,7 @@ AFallDownCharacter::AFallDownCharacter()
 	Mesh1P->SetRelativeLocation(FVector(-0.5f, -4.4f, -155.7f));
 
 	//////////////////////////////////////////////////////////////////////////////////////////////
-	//Wyszukiwanie assetów
+	//Wyszukiwanie assetï¿½w
 	ConstructorHelpers::FClassFinder<UCameraShakeBase> ShakeCameraMatineFinder(TEXT("/Game/Assets/CameraShake/BaseCameraShake"));
 	CameraShakeClass = ShakeCameraMatineFinder.Class;
 
@@ -99,15 +99,15 @@ void AFallDownCharacter::SetupPlayerInputComponent(class UInputComponent* Player
 
 	//////////////////////////////////////////////////////////////////////////////////////////////
 	// Input
-	// Move Forward / Backward - Ruch do przodu do ty³u 
+	// Move Forward / Backward - Ruch do przodu do tyï¿½u 
 	// 
-	// Move Right / Left - Ruch do przodu i do ty³u
+	// Move Right / Left - Ruch do przodu i do tyï¿½u
 	//
 	PlayerInputComponent->BindAxis("Move Forward / Backward", this, &AFallDownCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("Move Right / Left", this, &AFallDownCharacter::MoveRight);
 
 	//////////////////////////////////////////////////////////////////////////////////////////////
-	// Okrêcanie kamer¹
+	// Okrï¿½canie kamerï¿½
 	//
 	PlayerInputComponent->BindAxis("Turn Right / Left Mouse", this, &AFallDownCharacter::TurnAtRate);
 	PlayerInputComponent->BindAxis("Look Up / Down Mouse", this, &AFallDownCharacter::LookUpAtRate);
@@ -145,7 +145,7 @@ void AFallDownCharacter::EndTouch(const ETouchIndex::Type FingerIndex, const FVe
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
-// Ruch postaci - do przedu : do ty³u
+// Ruch postaci - do przedu : do tyï¿½u
 //
 void AFallDownCharacter::MoveForward(float Value)
 {
@@ -209,7 +209,7 @@ void AFallDownCharacter::HideInterface()
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
-// Ca³kowite usuniêcie widkou z vieportu gracza
+// Caï¿½kowite usuniï¿½cie widkou z vieportu gracza
 //
 void AFallDownCharacter::DestroyInterface()
 {
@@ -221,7 +221,7 @@ void AFallDownCharacter::DestroyInterface()
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////
-// Okrêcanie kamer¹ - góra : dó³
+// Okrï¿½canie kamerï¿½ - gï¿½ra : dï¿½
 //
 void AFallDownCharacter::TurnAtRate(float Rate)
 {
@@ -235,7 +235,7 @@ void AFallDownCharacter::TurnAtRate(float Rate)
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
-// Okrêcanie kamer¹ - lewo : prawo 
+// Okrï¿½canie kamerï¿½ - lewo : prawo 
 //
 void AFallDownCharacter::LookUpAtRate(float Rate)
 {
@@ -261,7 +261,7 @@ bool AFallDownCharacter::EnableTouchscreenMovement(class UInputComponent* Player
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
-// Shake camera nie wiem jak w polandyjskim jêzyku xD
+// Shake camera nie wiem jak w polandyjskim jï¿½zyku xD
 //
 void AFallDownCharacter::ShakeCameraPlayer()
 {

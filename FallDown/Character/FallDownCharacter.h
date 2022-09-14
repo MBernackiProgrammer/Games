@@ -1,4 +1,4 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+// Copyright Mateusz Bernacki. All Rights Reserved.
 
 #pragma once
 
@@ -86,37 +86,37 @@ public:
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 // 	   Shake camera
-//Ta sekcja private skupia siê na funkcjach i zmiennych do wywyo³ania trzêsienia siê kamery 
+//Ta sekcja private skupia siï¿½ na funkcjach i zmiennych do wywyoï¿½ania trzï¿½sienia siï¿½ kamery 
 private:
-	//To jest timer, który jest u¿ywany do odliczania, aby co 3600 sekund w³¹czyæ matine shake camera
+	//To jest timer, ktï¿½ry jest uï¿½ywany do odliczania, aby co 3600 sekund wï¿½ï¿½czyï¿½ matine shake camera
 	FTimerHandle ShekeCameraDelayHandler;
 
-	//Funkcja do cz¹sania kamer¹
+	//Funkcja do czï¿½sania kamerï¿½
 	void ShakeCameraPlayer();
 
-	//Przechowuje cz¹sanie kamery (obiekt)
+	//Przechowuje czï¿½sanie kamery (obiekt)
 	TSubclassOf<UCameraShakeBase> CameraShakeClass;
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 // 	   Camera rotation
-//Ta sekcja private skupia siê na zmiennych potrzebnych do p³ynnego dzia³ania kamery oraz za jej ruch
+//Ta sekcja private skupia siï¿½ na zmiennych potrzebnych do pï¿½ynnego dziaï¿½ania kamery oraz za jej ruch
 private:
 	//To jest do movementu camery 
 
-	//Przechowuje wartoœæ równania 
+	//Przechowuje wartoï¿½ï¿½ rï¿½wnania 
 	float UpDownFinterpOut;
 
-	//Przechowuje wartoœæ równania 
+	//Przechowuje wartoï¿½ï¿½ rï¿½wnania 
 	float RightLeftFinterpOut;
 
-	//Odpowiada za obrót kamery (okrêcanie : lewo - prawo)
-	//Wartoœæ dodatnia = obracanie kamery w prawo 
-	//Wartoœæ ujemna = obracanie kamery w lewo 
+	//Odpowiada za obrï¿½t kamery (okrï¿½canie : lewo - prawo)
+	//Wartoï¿½ï¿½ dodatnia = obracanie kamery w prawo 
+	//Wartoï¿½ï¿½ ujemna = obracanie kamery w lewo 
 	void TurnAtRate(float Rate);
 
-	//Odpowiada za obrót kamery (okrêcanie : góra - dó³)
-	//Wartoœæ dodatnia = okrêcanie kamery do góry 
-	//Wartoœæ ujemna = okrêcanie kamery w dó³
+	//Odpowiada za obrï¿½t kamery (okrï¿½canie : gï¿½ra - dï¿½)
+	//Wartoï¿½ï¿½ dodatnia = okrï¿½canie kamery do gï¿½ry 
+	//Wartoï¿½ï¿½ ujemna = okrï¿½canie kamery w dï¿½
 	void LookUpAtRate(float Rate);
 
 //////////////////////////////////////////////////////////////////////////////////////////////
@@ -124,18 +124,18 @@ private:
 //Ta sekcja private odpowiada za ruch postaci(aktora / character)
 private:
 	//Odpowiada za ruch do przodu
-	//Wartoœæ dodatnia = ruch w prawo 
-	//Wartoœæ ujemna = ruch w lewo 
+	//Wartoï¿½ï¿½ dodatnia = ruch w prawo 
+	//Wartoï¿½ï¿½ ujemna = ruch w lewo 
 	void MoveForward(float Val);
 
 	//Odpowiada za ruch w prawo
-	//Wartoœæ dodatnia = do przodu 
-	//Wartoœæ ujemna = do ty³u
+	//Wartoï¿½ï¿½ dodatnia = do przodu 
+	//Wartoï¿½ï¿½ ujemna = do tyï¿½u
 	void MoveRight(float Val);
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 // 	   UserInterface
-//Tworzenie interfacu u¿ytkownika
+//Tworzenie interfacu uï¿½ytkownika
 //
 // 
 /////////////////////////////////////////
